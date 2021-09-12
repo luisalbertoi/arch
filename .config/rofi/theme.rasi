@@ -1,0 +1,44 @@
+* {
+  white: rgba(255, 255, 255, 1);
+  canvas: rgba(23, 23, 23, 0.95);
+  selector: rgba(68, 68, 68, 0.5);
+  selected: rgba(218, 0, 55, 0.8);
+  transparent: rgba(255, 255, 255, 0);
+  background-color: @transparent;
+  text-color: @white;
+  foreground: #404;
+}
+
+#window {
+  border: 0px;
+  border-radius: 5px;
+  background-color: @canvas;
+  location: center;
+  padding: 5px;
+}
+
+#listview {
+  border: 1px 0px 0px;
+  padding:  2px 0px 0px;
+  border-color: @selector;
+  scrollbar: false;
+}
+
+#prompt {
+  padding: 0px 4px 0 0;
+  text-color: @selected;
+}
+
+#element {
+  padding: 2px;
+  border-radius: 3px;
+  background-color: @transparent;
+}
+
+#element selected.normal {
+  background-color: @selector;
+}
+
+#element selected active {
+  background-color: @selected;
+}

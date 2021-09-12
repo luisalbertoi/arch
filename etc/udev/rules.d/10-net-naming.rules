@@ -1,0 +1,4 @@
+# ip a l
+
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="3c:a0:67:3a:df:22", NAME="wifi"
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="60:45:cb:b4:ee:41", NAME="ethernet"
