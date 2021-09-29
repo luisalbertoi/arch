@@ -10,8 +10,7 @@ class create():
     )
   def Separator():
     return widget.TextBox(
-      text='⋮',
-      padding=0,
+      text='⁝',
       fontsize=14
     )
   def space():
@@ -68,7 +67,7 @@ primary = [
   create.Separator(),
   create.Icon("wifi"),
   widget.Wlan(
-    interface="wifi",
+    interface="wlp3s0",
     format="{quality}/70"
   ),
   create.Separator(),
