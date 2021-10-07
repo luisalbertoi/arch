@@ -73,8 +73,9 @@ sudo sed -i "84 i $access" /etc/sudoers
 sudo rsync -rvh $route/source/system/. /etc/
 rsync -rvh $route/source/config/. ~/.config/
 
-# enable session manager
+# enable services
 sudo systemctl enable ly
+systemctl --user enable redshift
 
 # clean cache
 yay -Sc --noconfirm

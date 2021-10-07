@@ -5,15 +5,21 @@ mod = "mod4"
 terminal = "alacritty"
 
 keys = [
-  Key([mod], "h", lazy.layout.left()),
-  Key([mod], "l", lazy.layout.right()),
-  Key([mod], "j", lazy.layout.down()),
-  Key([mod], "k", lazy.layout.up()),
+  Key([mod], "Right", lazy.layout.next()),
+	Key([mod], "Left", lazy.layout.previous()),
 
-  Key([mod], "Return", lazy.spawn(terminal)),
+  Key([mod, "shift"], "Up", lazy.layout.grow()),
+	Key([mod, "shift"], "Down", lazy.layout.shrink()),
+
+  Key([mod], "m", lazy.layout.maximize()),
+  Key([mod], "n", lazy.layout.normalize()),
+
+  Key([mod, "shift"], "space", lazy.layout.flip()),
 
   Key([mod], "Tab", lazy.next_layout()),
   Key([mod], "w", lazy.window.kill()),
+
+  Key([mod], "Return", lazy.spawn(terminal)),
 
   Key([mod, "control"], "r", lazy.restart()),
   Key([mod, "control"], "q", lazy.shutdown()),

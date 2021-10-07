@@ -29,12 +29,12 @@ for i, group in enumerate(groups):
   ])
 
 #create screens 
-#primary from widgets
+#navigation from widgets
 screens = [
   Screen(
     top=bar.Bar(
-      primary, 24,
-      opacity=0.92
+      navigation, 24,
+      opacity=0.90
     )
   )
 ]
@@ -54,4 +54,4 @@ wmname = "LG3D"
 # auto start
 @hook.subscribe.startup
 def autostart():
-  call(['sh', path.join(route, 'primary.sh')])
+  call(['sh', path.join(route, 'launch.sh')])
