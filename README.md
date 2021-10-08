@@ -19,5 +19,5 @@ $ sh install.sh
 
 ---
 ### Capturas de pantalla
-![terminal](/images/screenshot-1.png)
-![more](/images/screenshot-2.png)
+![terminal](/captures/terminal.png)
+![more](/captures/search.png)
