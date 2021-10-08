@@ -6,12 +6,12 @@ class create():
     path=route + "/icons/"
     return widget.Image(
       filename=path + name + ".png",
-      margin=4,
+      margin=3.8,
     )
   def space():
     return widget.Sep(
       linewidth=0,
-      padding=5
+      padding=6,
     )
 
 def cutter(text):
@@ -43,6 +43,7 @@ graph = dict(
 navigation = [
   widget.GroupBox(
     margin_x=0,
+    padding_y=3,
     padding_x=6.5,
     active=color['active'],
     inactive=color['inactive'],
@@ -63,23 +64,22 @@ navigation = [
   ),
   create.space(),
   widget.Systray(
-    icon_size=18,
+    icon_size=17,
+    padding=8,
   ),
   create.space(),
-  create.icon('memory'),
   widget.MemoryGraph(
     **graph, width=18
   ),
   create.space(),
-  create.icon('cpu'),
   widget.CPUGraph(
     **graph, width=50
   ),
   create.space(),
-  create.icon("wifi"),
+  create.icon("connection"),
   widget.Wlan(
     interface="wlp3s0",
-    format="{quality}/70"
+    format="{quality}↯70"
   ),
   create.space(),
   create.icon("volume"),
@@ -90,7 +90,7 @@ navigation = [
       backlight_name="intel_backlight"
   ),
   create.space(),
-  create.icon('update'),
+  create.icon('updates'),
   widget.CheckUpdates(
     distro="Arch",
     no_update_string="N/A",
@@ -109,6 +109,6 @@ widget_defaults = dict(
   font='Noto Sans Medium',
   foreground=color['text'],
   fontsize=12,
-  padding=3,
+  padding=2
 )
 extension_defaults = widget_defaults.copy()
