@@ -17,7 +17,8 @@ usuario ALL=(ALL) ALL
 $ sh install.sh
 ```
 
+* [GRUB - THEME](./grub/)
+
 ---
 ### Capturas de pantalla
-![terminal](/captures/terminal.png)
-![more](/captures/search.png)
+![screenshot](./screenshot.png)
